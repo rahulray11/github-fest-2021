@@ -1,0 +1,57 @@
+
+#convert{
+    background-color: chocolate;
+    width: 60%;
+    margin: 0 auto;
+    border: 10px solid white ;
+    border-radius: 5px;
+    box-shadow: 10px 10px;
+    text-align: center;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+h1{
+    color:blue;
+}
+input {
+    padding: 5px;
+    margin-top: 10px;
+}
+label{
+    
+    font-weight: bold;
+    font-size: 30px;
+}
+button{
+    background-color: rgb(22, 22, 233);
+    color: white;
+    border-radius: 6px;
+    padding:10px;
+}
+button:hover{
+    background-color: blueviolet;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);;
+}
+button:active{
+    transform: translateY(4px);
+}
+#percentage{
+    font-size: 30px;
+    font-weight: bold;
+}
+footer{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+@media screen and (max-width:600px){
+
+    #calculator{
+        width: 80%;
+    }
+
+}
