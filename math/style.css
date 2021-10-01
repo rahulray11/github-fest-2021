@@ -1,0 +1,18 @@
+#container{
+    width: 1000px;
+    border: 1px solid grey;
+    height: 100px;
+    margin: 0 auto;
+}
+h1 a{
+    text-decoration: none;
+    font-size:50px;
+    font-weight: 100;
+    color:blueviolet;
+}
+#searchBox{
+    float: right;
+}
+#brand{
+    float: left;
+}
