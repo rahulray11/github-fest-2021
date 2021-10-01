@@ -1,4 +1,6 @@
-
+body{
+    background-color: beige;
+}
 #convert{
     background-color: chocolate;
     width: 60%;
@@ -14,7 +16,7 @@
 
 }
 h1{
-    color:blue;
+    color:rgb(78, 78, 121);
 }
 input {
     padding: 5px;
