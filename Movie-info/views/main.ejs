@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main</title>
+    <link href="/css/index.css" rel="stylesheet" />
+    <link rel="icon" href="https://thumbs.dreamstime.com/b/movie-film-company-logo-design-vector-template-movie-film-company-logo-design-inspiration-vector-template-167661473.jpg" type="image/icon type">
+    
+    <style>
+      .images {
+        width: 200px;
+        height: 300px;
+      }
+
+      .images:hover {
+        transform: scale(1.01);
+      }
+
+      body {
+        margin: 0px;
+      }
+
+      p {
+        font-family: sans-serif;
+      }
+
+      p:hover {
+        color: #006dc7;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+        background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf   100%);
+        padding: 10px;
+      }
+
+      .grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      @media screen and (max-width:700px){
+          .grid-container {
+            display: block;
+          }
+          .names{
+              font-size: 25px;
+          }
+      }
+      @media screen and (max-width:300px){
+        .grid-container {
+          display: block;
+        }
+        .names{
+            font-size: 20px;
+        }
+        
+        .images{
+            width: 100px;
+            height: 150px;
+        }
+    }
+
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="brand-title logo">Welcome</div>
+        <span class="navbar-toggle" id="js-navbar-toggle">
+          <i class="fas fa-bars"></i>
+        </span>
+        <div class="navbar-links">
+            <ul class="main-nav" id="js-menu">
+                <li><a class="nav-links" href="/main">Home</a></li>
+                <li><a class="nav-links" href="/people">People</a></li>
+                <li><a class="nav-links" href="/people/singleid">Search</a></li>
+                <li><a class="nav-links" href="/">Logout</a></li>
+              </ul>
+        </div>
+      </nav>
+    </header>
+    <script>
+      let mainNav = document.getElementById("js-menu");
+      let navBarToggle = document.getElementById("js-navbar-toggle");
+
+      navBarToggle.addEventListener("click", function () {
+        mainNav.classList.toggle("active");
+      });
+    </script>
+    <div class="bar">
+      <form action="/main" method="get">
+        <div class="hehe" style="margin: 40px">
+          <label for="movie" name="movie"></label>
+          <input style="text-align: center;"
+            type="text"
+            id="movie"
+            placeholder="Enter Movie name"
+            name="movie"
+            class="searchbar"
+            value="<%= inp %>"
+          />
+          <button
+            type="submit"
+            style="
+            background-color: #B26FCC; color:white;
+              padding: 7px;
+              border-radius: 10px;
+            "
+          >
+            <img src="/searchbut.svg" alt="search" />
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="grid-container">
+      <% array.forEach(i=>{ %>
+      <div class="grid-item">
+        <% if (i.i){ %>
+        <img class="images" src="<%= i.i.imageUrl %>" alt="movie" />
+        <% } %>
+        <h1 class="names"><%= i.l %></h1>
+        <% if (i.y){ %>
+        <p>Year of release: <%=i.y %></p>
+        <% } %> <% if (i.s){ %>
+        <p>Cast of film: <%=i.s %></p>
+        <% } %> <% if (i.q){ %>
+        <p>Type: <%=i.q %></p>
+        <% } %>
+      </div>
+      <% }) %>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/a07e4b20fd.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

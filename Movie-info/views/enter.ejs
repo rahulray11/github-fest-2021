@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enter</title>
+    <link href="/css/login.css" rel="stylesheet" />
+  </head>
+  <body>
+    
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+        <form action="/signin" method="POST">
+          <h1>Create Account</h1>
+          <input type="text" name="name" required placeholder="Name" />
+          <input type="email" name="email" required placeholder="Email" />
+          <input type="text" name="dob" required placeholder="Date of Birth (dd/mm/yyyy)">
+          <input type="text" required name="location" placeholder="Place of Residence">
+          <input type="password"  name="password" required placeholder="Password" />
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <form action="/" method="POST">
+
+          <h1>Log In</h1>
+          <input type="email" required name="email" placeholder="Email" value="<%= locals.email %> "/>
+          <input type="password" required name="password" placeholder="Password"/>
+          <h3><%= locals.msg %>  </h3>
+    
+          <button type="submit">Log In</button>
+          <p>Contact <span style="color: #c16ecf;">gopivaibhav0@gmail.com</span> if you forget password</p>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Connect Us</h1>
+            <p>
+              To keep connected with us please enter your personal info
+            </p>
+        
+            <button class="ghost" id="signIn">Log In</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Hello, User!</h1>
+            <p>Enter the world of movies</p>
+            <button class="ghost" id="signUp">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const signUpButton = document.getElementById("signUp");
+      const signInButton = document.getElementById("signIn");
+      const container = document.getElementById("container");
+
+      signUpButton.addEventListener("click", () => {
+        container.classList.add("right-panel-active");
+      });
+
+      signInButton.addEventListener("click", () => {
+        container.classList.remove("right-panel-active");
+      });
+    </script>
+    
+  </body>
+</html>

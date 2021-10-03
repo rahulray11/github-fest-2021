@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link href="/css/index.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+          <div class="brand-title logo">Welcome</div>
+          <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+          </span>
+          <div class="navbar-links">
+            <ul class="main-nav" id="js-menu">
+              <li><a class="nav-links" href="/main">Home</a></li>
+              <li><a class="nav-links" href="/people">People</a></li>
+              <li><a class="nav-links" href="/people/singleid">Search</a></li>
+              <li><a class="nav-links" href="/">Logout</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <script>
+        let mainNav = document.getElementById("js-menu");
+        let navBarToggle = document.getElementById("js-navbar-toggle");
+  
+        navBarToggle.addEventListener("click", function () {
+          mainNav.classList.toggle("active");
+        });
+      </script>
+    <div style="margin-left: 20px;margin-right: 20px;margin-top: 30px;">
+        <h1 style="margin-left: 20px;margin-top: 30px;">
+            Welcome <%= person.name%>,
+        </h1>
+        <h4 style="margin-left: 20px;margin-top: 30px;text-align:center;">
+            <%= person.location%> is really lucky to have you in it...
+        </h4>
+        <script
+      src="https://kit.fontawesome.com/a07e4b20fd.js"
+      crossorigin="anonymous"
+    ></script>
+        </body>
+        <footer>
+            <div style="margin-left: 20px;margin-top: 30px;">
+                <h3>This is Gopi Vaibhav who has your information</h3>
+                
+                <img src="/cruel.svg" style="width:35px;text-align:center;margin-top: 5px;" alt="cruel" >
+            </div>
+        </footer>
+    </div>
+</html>
