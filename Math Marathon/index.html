@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0">
+    <title>Math Marathon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-con">
+        <div class="header">
+            <h1>Math Marathon</h1>
+        </div>
+
+
+
+    <div class="card" id="splash-page" >
+        <form id="start-form">
+            <div class="selection-container">
+                <div class="radio-container">
+                    <label for="value-10">10 Questions</label>
+                    <input type="radio" name="questions" value="10" id="value-10">
+                    <span class="best-score">
+                        <span>Best Score</span>
+                        <span class="best-score-value"></span>
+                    </span>
+                </div>
+            </div>
+           
+            <div class="selection-container">
+                <div class="radio-container">
+                    <label for="value-25">25 Questions</label>
+                    <input type="radio" name="questions" value="25" id="value-25">
+                    <span class="best-score">
+                        <span>Best Score</span>
+                        <span class="best-score-value"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="selection-container">
+                <div class="radio-container">
+                    <label for="value-50">50 Questions</label>
+                    <input type="radio" name="questions" value="50" id="value-50">
+                    <span class="best-score">
+                        <span>Best Score</span>
+                        <span class="best-score-value"></span>
+                    </span>
+                </div>
+            </div> <div class="selection-container">
+                <div class="radio-container">
+                    <label for="value-100">100 Questions</label>
+                    <input type="radio" name="questions" value="100" id="value-100">
+                    <span class="best-score">
+                        <span>Best Score</span>
+                        <span class="best-score-value"></span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="selection-footer">
+                <button class="start" type="submit">Start Round</button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <div class="card" id="countdown-page" hidden>
+        <h1 class="countdown"></h1>
+        
+
+    </div>
+
+    <div class="card" id="game-page" hidden>
+
+        <div class="item-container" >
+           
+            
+
+            </div>
+          
+     
+         
+
+
+    
+        <div class="item-footer" >
+            <button class="wrong" onclick="select(false)">Wrong</button>
+            <button class="right" onclick="select(true)">Right</button>
+        </div>
+    </div>
+
+    <div class="card" id="score-page" hidden>
+        <div class="score-container">
+            <h1 class="title">Your Time</h1>
+            <h1 class="final-time"></h1>
+            <h1 class="base-time"></h1>
+            <h1 class="penalty-time"></h1>
+
+
+        </div>
+        <div class="score-footer" >
+            <button class="play-button" onclick="playAgain()" hidden>
+                Play Again
+            </button>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+    
+    <script src="app.js"></script>
+    <script src="shuffle.js"></script>
+</body>
+</html>

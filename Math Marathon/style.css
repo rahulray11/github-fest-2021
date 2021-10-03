@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color:dodgerblue;
+    --select-color:dodgerblue;
+    --success:rgb(14,158,2);
+    --danger:rgb(214,23,23);
+
+
+}
+
+
+body{
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: #e8e8e8;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M14 16H9v-2h5V9.87a4 4 0 1 1 2 0V14h5v2h-5v15.95A10 10 0 0 0 23.66 27l-3.46-2 8.2-2.2-2.9 5a12 12 0 0 1-21 0l-2.89-5 8.2 2.2-3.47 2A10 10 0 0 0 14 31.95V16zm40 40h-5v-2h5v-4.13a4 4 0 1 1 2 0V54h5v2h-5v15.95A10 10 0 0 0 63.66 67l-3.47-2 8.2-2.2-2.88 5a12 12 0 0 1-21.02 0l-2.88-5 8.2 2.2-3.47 2A10 10 0 0 0 54 71.95V56zm-39 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm40-40a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM15 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm40 40a2 2 0 1 0 0-4 2 2 0 0 0 0 4z'%3E%3C/path%3E%3C/svg%3E");
+
+}
+
+.game-con{
+    border: 1px solid black;
+    box-shadow: 0 10px 20px -5px rgb(0,0,0,0.5);
+    width: 530px;
+    height: 750px;
+    position: relative;
+    background: rgb(255,255,255,0.5);
+    user-select: none;
+    margin-top: 100px;
+}
+
+.header{
+    background: var(--primary-color);
+    color: white;
+    font-size: 24px;
+    text-shadow: 1px 2px 2px black;
+    letter-spacing: 2px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card{
+    margin: 5px auto 10px;
+    height: 600px;
+
+
+}
+
+.selection-container{
+    position: relative;
+    top:65px;
+}
+
+.radio-container{
+    width: 90%;
+    height: 75px;
+    margin: 25px;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 5px;
+
+}
+
+label{
+    position: relative;
+    top: 14px;
+    left:20px;
+    font-size: 30px;
+
+}
+
+input[type="radio"]{
+    opacity: 0;
+    width: 100%;
+    height: 75px;
+    position: relative;
+    top: -40px;
+    cursor: pointer;
+    z-index: 2;
+
+}
+
+.best-score{
+    position: relative;
+    top:-124px;
+    left: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    max-width:fit-content;
+
+}
+
+.best-score span{
+    margin: 0;
+
+}
+
+.best-score span:last-child{
+    font-size: 24px;
+
+
+}
+
+.selected-label{
+    background-color: var(--select-color);
+    color: white;
+}
+.item-footer,
+.selection-footer{
+    width: 100%;
+    height: 90px;
+    top: 134px;
+    background: rgb(0,0,0,1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+button{
+    cursor: pointer;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 25px;
+    color: white;
+    border: none;
+    outline: none;
+
+}
+.play-button,
+.start{
+    width: 90%;
+    background: var(--primary-color);
+    transition: all 0.1s linear;
+}
+
+.start:hover{
+    filter: brightness(110%);
+    transform: scale(0.9);
+    background-color: white;
+    color: black;
+}
+
+.countdown{
+    margin-top:45% ;
+    font-size: 100px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.item-container{
+    height: 554px;
+    position: relative;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+}
+
+.item{
+    display: flex;
+    align-items: baseline;
+    justify-content:space-between;
+    height: 80px;
+    margin: 0 50px;
+    user-select: none;
+
+}
+
+.selected-item{
+    background-color: var(--select-color);
+    top: 443px;
+    position: fixed;
+    width: 529px;
+    height: 80px;
+    z-index: -1;
+}
+
+.item-container::-webkit-scrollbar{
+    display: none;
+}
+
+.item-footer{
+    top: 1px;
+
+
+}
+
+.wrong,.right{
+    width: 40%;
+}
+.wrong{
+    background:var(--danger);
+    margin-right: 25px;
+}
+
+.right{
+    background: var(--success);
+}
+
+.score-container{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    font-size: 45px;
+}
+
+.final-time{
+    font-size: 100px;
+    margin: 0;
+    color: var(--success);
+
+}
+
+.base-time{
+    margin-top: 100px;
+    margin-bottom: 0;
+
+
+}
+.penalty-time{
+    color: var(--danger);
+
+
+}
+
+.score-footer{
+    width: 100%;
+    height: 90px;
+    top: -30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+
+.height-240{
+    height: 240px;
+    width:100%
+}
+
+
+.height-500{
+    height: 240px;
+    width:100%
+}
