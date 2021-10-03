@@ -7,7 +7,7 @@
 	</head>
 	<body>
 		<h1>Form Validation</h1>
-		<form action="./script.js" method="post" name="myForm"  onsubmit="return validate()">
+		<form method="get" action="index.html" name="myForm" onsubmit="return validate(event)">
 			<label for="name">Name:</label> <br>
 			<input type="text" id="name" placeholder="Enter name..."> <br>
 			<label for="class">Class:</label> <br>
