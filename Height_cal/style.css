@@ -48,7 +48,8 @@ label{
     font-weight: bold;
 }
 footer{
-    margin-top: 30px;
+    bottom: clear;
+    margin-top: 70px;
     text-align: center;
     font-size: 30px;
     font-weight: bold;
