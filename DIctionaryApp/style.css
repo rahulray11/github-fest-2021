@@ -113,6 +113,7 @@
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     color: #fff;
     margin: 5px 8px 5px 0;
+    cursor: pointer;
   }
   
   @media only screen and (max-width: 600px) {
