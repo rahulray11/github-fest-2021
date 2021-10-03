@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People</title>
+    <link href="/css/index.css" rel="stylesheet">
+    <link rel="icon" href="https://thumbs.dreamstime.com/b/movie-film-company-logo-design-vector-template-movie-film-company-logo-design-inspiration-vector-template-167661473.jpg" type="image/icon type">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <div class="brand-title logo">Welcome</div>
+          <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+          </span>
+          <div class="navbar-links">
+            <ul class="main-nav" id="js-menu">
+                <li><a class="nav-links" href="/main">Home</a></li>
+                <li><a class="nav-links" href="/people">People</a></li>
+                <li><a class="nav-links" href="/people/singleid">Search</a></li>
+                <li><a class="nav-links" href="/">Logout</a></li>
+              </ul>
+          </div>
+        </nav>
+      </header>
+      <script>
+        let mainNav = document.getElementById("js-menu");
+        let navBarToggle = document.getElementById("js-navbar-toggle");
+  
+        navBarToggle.addEventListener("click", function () {
+          mainNav.classList.toggle("active");
+        });
+      </script>
+      
+    <div style="margin-left: 20px;margin-right: 20px;">
+        <h1
+            style="margin-top: 30px;color:#5F73BA;display: flex;justify-content:center;text-shadow: 8px 8px 10px rgba(255, 248, 220, 1);margin-bottom:40px">
+            People Registered here:</h1>
+        <hr>
+        <table style="width:100%">
+            <tr style="background-color: #BE6ECE; color:white;">
+                <th style="padding:2.5px; width: 20%;" rowspan="1">Name</th>
+                <th style="padding:2.5px; width: 20%;" rowspan="1">Date of Birth</th>
+                <th style="padding:2.5px; width: 20%;" rowspan="1">Resident location</th>
+            </tr>
+    
+            <% persons.forEach(i=>{ %>
+                <tr>
+                    <td>
+                        <%= i.name %>
+                    </td>
+                    <td>
+                        <%= i.dob %>
+                    </td>
+                    <td>
+                        <%= i.location %>
+                    </td>
+                </tr>
+                <% }) %>
+        </table>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/a07e4b20fd.js"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>
