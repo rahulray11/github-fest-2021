@@ -1,0 +1,123 @@
+body {
+  /* background: #333; */
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+
+  html{
+    font-size:64.5% ;
+  }
+  @media ( max-width:990px){
+    html{
+      font-size: 55%;
+    }
+  }
+  @media  (max-width:768px){
+    html{
+      font-size: 45%;
+    }
+
+  }
+.wrapper {
+  width: 45rem;
+  height: 50rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  overflow: hidden;
+  box-shadow: 0 0 10px grey;
+  border-radius: 3rem;
+}
+
+.wave {
+  width: 100rem;
+  height: 102.5rem;
+  position: absolute;
+  top: -25%;
+  left: 50%;
+  margin-left: -50rem;
+  margin-top: -62rem;
+  border-radius: 35%;
+  background: rgba(255, 255, 255, .75);
+  animation: wave 15s infinite linear;
+  z-index: -1;
+}
+
+@keyframes wave {
+  from { transform: rotate(0deg);}
+  from { transform: rotate(360deg);}
+}
+
+.input-area{
+  position: relative;
+  width:100%;
+  height:8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-area input{
+  height:4rem;
+  width:20rem;
+  border:0.5rem solid black;
+  border-radius: 2rem ;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.city{
+  width:100%;
+  font-size:6rem;
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: bold;
+  font-family: 'Anton', sans-serif;
+  
+font-family: 'Josefin Sans', sans-serif;
+}
+.info{
+  width:100%;
+  height:20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* font-family: 'Josefin Sans', sans-serif; */
+  font-style: bold;
+  font-weight: 540;
+}
+.mainTemp{
+  font-size: 5rem;
+}
+.otherTemp{
+  font-size: 3rem;
+  color: #353b48;
+  
+}
+.weather{
+  font-size: 5rem;
+}
+.no{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.author{
+ text-align: center;
+ bottom:0px;
+ position: absolute;
+ font-size: 2rem;
+ left:10rem;
+}
