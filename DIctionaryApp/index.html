@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary App</title>
+    <link rel="icon" href="d.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="class">
+        Personal Dictionary
+    </h1>
+    <div class="input">
+        <input onkeypress="handle(event)" type="text" class = "search-field" id="wordinput" placeholder="Search your word and press enter"/>
+    </div>
+    <div class="result">
+        <h1 id="word" class="word"></h1>
+        <p class="phonetics"></p>
+        <audio class="audio" controls></audio>
+        <p class="meaningheading">Meaning:</p>
+        <p class="word-definition"></p>
+        <p class="meaningheading">Synonyms:</p>
+        <div class="synonyms"></div>
+    </div>
+
+</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
