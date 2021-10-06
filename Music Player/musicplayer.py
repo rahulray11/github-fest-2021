@@ -2,11 +2,14 @@ import pygame
 import tkinter as tkr
 from tkinter.filedialog import askdirectory
 import os
+import time
 
 musicplayer = tkr.Tk()
 musicplayer.title("Music Player")
 musicplayer.geometry("450x350")
 
+
+print("Select Track")
 directory = askdirectory()
 os.chdir(directory)
 songlist = os.listdir()
