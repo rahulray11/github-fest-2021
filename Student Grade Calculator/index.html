@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+
+  </head>
+  <body>
+    <h1 class="text-center fw8 ttu ">Grade Calculator</h1>
+    <div class="container ">
+    <div class="screen-body-item pv4 ">
+      <div class=" ba b--dotted bw4 br-pill row flex flex-column items-center app-form ">
+        <div class="app-form-group col-lg-3 col-md-3 col-12 p-4">
+          <input
+            type="text"
+            class="app-form-control pa2"
+            placeholder="web programming"
+            id="wd"
+          />
+        </div>
+        <div class="app-form-group col-lg-3 col-md-3 col-12 p-4">
+          <input
+            type="text"
+            class="app-form-control pa2"
+            placeholder="Maths"
+            id="maths"
+          />
+        </div>
+        <div class="app-form-group col-lg-3 col-md-3 col-12 p-4">
+          <input
+            type="text"
+            class="app-form-control pa2"
+            placeholder="Computer"
+            id="comp"
+          />
+        </div>
+        <div class="app-form-group col-lg-3 col-md-3 col-12 p-4">
+          <input
+            type="text"
+            class="app-form-control pa2"
+            placeholder="Physics"
+            id="phy"
+          />
+        </div>
+        <input
+          type="button"
+          name=""
+          value="show-percentage"
+          class="app-form-button col-lg-3 col-md-3 col-12 mt-4 pa2"
+          onclick="calcy()"
+        />
+        <div class="app-form-group showdata">
+          <p id="showdata" class="text-center"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script>
+      const calcy = () => {
+        let wd = document.getElementById("wd").value;
+        let comp = document.getElementById("comp").value;
+        let maths = document.getElementById("maths").value;
+        let phy = document.getElementById("phy").value;
+        grades = "";
+
+        let totalgrades =
+          parseFloat(wd) +
+          parseFloat(comp) +
+          parseFloat(maths) +
+          parseFloat(phy);
+        alert(totalgrades);
+
+        let perc = (totalgrades / 400) * 100;
+        alert(perc);
+
+        if (perc <= 100 && perc >= 80) grades = "A";
+        else if (perc >= 60 && perc <= 79) grades = "B";
+        else if (perc >= 40 && perc < 59) grades = "C";
+        else grades = "F";
+
+        if (perc >= 39.5) {
+          document.getElementById(
+            "showdata"
+          ).innerHTML = `Congratulations!! out of 400 your total grades is ${totalgrades} and percentage is ${perc}%. <br> and you have scored Grade ${grades} You are promoted to next session  `;
+        } else {
+          document.getElementById(
+            "showdata"
+          ).innerHTML = `Alas out of 400 your total grades is ${totalgrades} and percentage is ${perc}%. <br> and you have scored Grade ${grades} Try to improve your marks `;
+        }
+
+        // document.getElementById('showdata').innerHTML -->agar showdata k andar kuch hota v to replace ho jata avi wala data se.
+      };
+    </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+  </body>
+</html>
