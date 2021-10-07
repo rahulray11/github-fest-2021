@@ -1,0 +1,2 @@
+rootProject.name = "Connect 3 game"
+include ':app'
