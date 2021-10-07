@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(242, 248, 255);
+}
+.box-verify {
+  width: 500px;
+  height: 500px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 5px 25px black;
+  background-color: #fff;
+}
+.box-verify .head {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  position: relative;
+}
+.box-verify .head span:first-child {
+  font-size: 56px;
+  margin: 20px 0;
+}
+.box-verify .head span:last-child {
+  font-size: 32px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+.box-verify .content-text {
+  text-align: center;
+}
+.box-verify .content-text p {
+  max-width: 400px;
+  margin: 15px auto 30px;
+}
+.box-verify .code-number {
+  display: flex;
+  flex-direction: column;
+}
+.box-verify .code-number form .enter-number {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+.box-verify .code-number form .enter-number input {
+  width: 40px;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.37);
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+.box-verify .code-number form .submit {
+  min-width: 400px;
+  margin: auto;
+  display: flex;
+  padding: 0 30px;
+  justify-content: space-between;
+}
+.box-verify .code-number form .submit p{
+    max-width: 320px;
+    font-size: 16px;
+}
+.box-verify .code-number form .submit p span{
+    color: rgb(0, 81, 255);
+}
+.box-verify .code-number form .submit input{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    background-color: rgb(0, 81, 255);
+    cursor: pointer;
+}
