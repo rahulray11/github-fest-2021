@@ -1,0 +1,39 @@
+/* 
+  April 2021 By Muhammad Nur Ashiddiqi (Ilmu Komputer 2018)
+ */
+
+.pkp_site_name .is_img img {
+    display: block;
+    max-height: none;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+/* 
+.pkp_structure_head {
+ background-color: transparent;
+}
+body {
+ font-family: tahoma,geneva,sans-serif;
+}
+.obj_article_details .abstract {
+    text-align: justify;
+}
+.pkp_structure_footer_wrapper {
+	background: #e8ebef;
+	border-bottom:@double solid; 
+	border-bottom-color:#0d5494;
+}
+*/
+.pkp_footer_content {
+  float: left;
+  width: 70%;  
+  padding-top: 10px;
+  padding-bottom:10px;
+}
+.pkp_brand_footer {
+  float: right;
+  width: 30%;
+  padding-bottom:10px;
+  padding-top: 50px;
+}
