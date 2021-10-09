@@ -1,0 +1,42 @@
+html {
+	font-family: 100%;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100vh;
+	width: 100%;
+	font-family: 'Indie Flower', cursive;
+	background-color: #121212;
+	color: #ffffffda;
+}
+
+.container {
+	height: 100%;
+	width: 100%;
+	display: grid;
+	place-content: center;
+	background-image: url('https://wallpapercave.com/wp/wp8277081.jpg');
+	background-size: cover;
+}
+
+.loki {
+	font-size: 7rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 30rem;
+}
+
+.loki .letter {
+	text-shadow: 0 0 0.4em #ffffffda, 0 0 0.5em #ffffffda, 0 0 0.25em #ffffffda;
+    mix-blend-mode: screen;
+}
