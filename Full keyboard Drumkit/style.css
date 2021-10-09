@@ -1,0 +1,84 @@
+html {
+    font-size: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0.068), #004e92c5),
+      url("img.jpg") no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+
+  .keys {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .contain {
+    margin-top: 40px;
+  }
+
+  .key {
+    border: 0.4rem solid rgba(0, 0, 0, 0.788);
+    border-radius: 0.8rem;
+    margin: 0.7rem;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    min-width: 5rem;
+    min-height: 5rem;
+    text-align: center;
+    color: white;
+    background-color: rgba(112, 128, 144, 0.432);
+    text-shadow: 0 0 0.5rem black;
+    transition: all 0.07s ease;
+  }
+
+  .playing {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+    background-color: #ffc80098;
+  }
+
+  kbd {
+    display: block;
+    font-size: 4rem;
+    font-weight: bold;
+  }
+
+  .sound {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #ffc600;
+    font-family: "Poppins", sans-serif;
+  }
+
+  section h1 {
+    text-align: center;
+    font-size: 120px;
+    color: #ffc800fb;
+    font-family: "Kaushan Script", cursive;
+    margin: 20px auto;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+  }
+
+  footer div span {
+    color: #ffc600;
+    font-family: "Kaushan Script", cursive;
+    font-size: 27px;
+    /* font-style: italic; */
+  }
