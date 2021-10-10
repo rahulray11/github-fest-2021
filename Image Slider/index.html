@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Image</title>
+    <link href="https://fonts.googleapis.com/css?family=Anton|Cabin|Lato|Fjalla+One|Montserrat|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="owl-carousel owl-theme">
+        <div class="slide slide-1">
+            <div class="slide-content">
+                <img src="testimonial-2.jpg" alt="Avatar1" style="vertical-align: middle;width: 70px;height: 70px;border-radius: 70%;margin-left: 380px;" >
+                <h2 >Amazing!</h2>
+                <p><b>"Excellent environment, friendly service, great menu choices and really</p></b><p><b>decent food and at affordable prices. Will be back."</p></b><br><p><b>-Sifa</b></p><br><p><b>By Company</b></p>
+            </div>
+        </div>
+        <div class="slide slide-2">
+            <div class="slide-content">
+               <img src="testimonial-1.jpg" alt="Avatar2" style="vertical-align: middle;width: 70px;height: 70px;border-radius: 70%;margin-left: 380px;" >
+                <h2 >Amazing!</h2>
+                <p><b>"Excellent environment, friendly service, great menu choices and really</p></b><p><b>decent food and at affordable prices. Will be back."</p></b><br><p><b>-Sifa</b></p><br><p><b>By Company</b></p>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                items:1,
+                loop:true,
+                nav:true,
+                
+                smartSpeed:1500,
+                autoplayHoverPause:true
+            });
+        });
+    </script>
+</body>
+
+</html>
