@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --light-bg : #ddb58b;
+    --color-p1 : #f84506;
+
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+}      
+
+h2{
+    font-size: 4.5rem;
+    padding: 3rem;
+    font-weight: bold;
+    color: rgb(59, 59, 59);
+}
+
+h2 span {
+    color: var(--color-p1);
+}
+
+.cover{
+    height: 50vh;
+    margin-top: 2rem;
+}
+
+
+.Timer-body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.main-container{
+    display: flex;
+    justify-content:space-around;
+    text-align: center;
+}
+
+
+.day , .hour , .minute , .second {
+    font-size: 2rem;
+    border: 4px solid white;
+    border-radius: 10px;
+    width: 2.5em;
+}
