@@ -21,11 +21,6 @@ const countDownTimer = () =>{
     document.querySelector('.hour').innerHTML = hourText;
     document.querySelector('.minute').innerHTML = minuteText;
     document.querySelector('.second').innerHTML = secondText;
-
-
-    if(timeDiff < 10000){
-        showTime();
-    }
    
 };
 

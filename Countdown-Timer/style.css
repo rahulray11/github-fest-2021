@@ -7,7 +7,6 @@
 :root{
     --light-bg : #ddb58b;
     --color-p1 : #f84506;
-
 }
 
 body{
@@ -31,7 +30,6 @@ h2 span {
     margin-top: 2rem;
 }
 
-
 .Timer-body{
     min-height: 100vh;
     display: flex;
@@ -40,13 +38,11 @@ h2 span {
     justify-content: center;
 }
 
-
 .main-container{
     display: flex;
     justify-content:space-around;
     text-align: center;
 }
-
 
 .day , .hour , .minute , .second {
     font-size: 2rem;
