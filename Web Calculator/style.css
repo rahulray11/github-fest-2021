@@ -1,0 +1,58 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
+/* font-family: 'Stalinist One', cursive;*/
+
+body{
+    background-color: dimgray;
+}
+
+header{
+    margin-top: 40px;
+    text-align: center;
+    font-family: 'Stalinist One', cursive;
+    color: whitesmoke;
+    background-color: dimgray;
+    width: 100vw;
+}
+
+.output{
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+.input{
+    width: 200px;
+}
+input[type="text"]::placeholder{
+	text-align: center;
+    font-family: 'Stalinist One', cursive;
+}
+button{
+    font-family: 'Stalinist One', cursive;
+}
+span{
+    padding: 3.5px;
+}
+.set1{
+    padding: 1.5px;
+}
+.set2{
+    padding: 1.5px;
+}
+.set3{
+    padding: 1px;
+}
+.footer1{
+	text-align: center;
+    color: white;
+    position: absolute;
+	bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+	font-family: 'Stalinist One', cursive;
+	font-size: 20px;
+	line-height: 2rem;	
+}
+.fa-heart{
+	color: red;
+}
