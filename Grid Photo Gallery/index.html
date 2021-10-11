@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
+    <title>My Gallery</title>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <section class="header" id="home">
+        <nav class="navbar">
+            <span class="logo">MY GALLERY</span>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <div class="navbar-collapse">
+                <ul>
+                    <li class="nav-item"><a href="#home">HOME</a></li>
+                    <li class="nav-item"><a href="#gallery">GALLERY</a></li>
+                    <li class="nav-item"><a href="#footer">CREATOR</a></li>
+                </ul>
+                </div>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </section>
+
+    <!-- GALLERY -->
+    <div class="gallery" id="gallery">
+        <div class="gallery-item">
+            <img src="images/d1.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+            <img src="images/d2.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+            <img src="images/d3.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+            <img src="images/d4.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+            <img src="images/d5.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+            <img src="images/d6.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+            <img src="images/d7.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+            <img src="images/d8.jpg" alt="">
+        </div>
+    </div>
+
+    <section class="footer" id="footer">
+        <p>Made with <i class="far fa-heart"></i> by Shubhrajyoti</p>
+    </section>
+
+    <!--javascript-->
+    
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+</body>
+</html>
