@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+}
+
+.header {
+    min-height: 7vh;
+    width: 100%;
+    position: relative;
+}
+
+/*--- Navbar ---*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+}
+
+nav .logo{
+    color: rgb(13, 189, 243);
+    font-size: 24px;
+    padding-left: 22px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 700;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.651);
+    z-index: 999;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 20px 15px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: rgb(250, 247, 246);
+    text-decoration: none;
+    padding-right: 20px;
+    font-size: 18px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+.nav-links ul li:hover::after {
+    width: 82%;
+}
+
+nav .fas {
+    display: none;
+}
+
+/*--- Gallery ---*/
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.gallery {
+    margin: 0 0.65rem;
+}
+
+.gallery-item {
+    height: auto;
+    margin: 0.5rem;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*--- Footer ---*/
+
+.footer {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    background-color: black;
+}
+
+.footer p{
+    color: white;
+}
+
+.fa-heart {
+    color: #ca1508;
+}
+
+
+/*------ @media queries ------*/
+
+/*---- Navbar ----*/
+
+@media(max-width: 700px) 
+{
+    .header {
+        min-height: 8vh;
+        width: 100%;
+        position: relative;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.651);
+        height: 100vh;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa-bars {
+        display: block;
+        color: rgb(240, 44, 119);
+        margin: 18px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    nav .fa-times {
+        display: block;
+        color: rgb(240, 44, 119);
+        margin: 18px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 10px;
+    }
+}
+
+/*--- Gallery ---*/
+
+@media (min-width: 640px)
+{
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3,300px);
+        grid-auto-flow: row dense;
+    }
+
+    .gallery-item{
+        margin: 0.7rem;
+    }
+
+    .gallery-item:first-child{
+        grid-row: span 1;
+    }
+
+    .gallery-item:nth-child(2){
+        grid-column: 2 / 3;
+        grid-row: span 2;
+    }
+
+    .gallery-item:nth-child(6),
+    .gallery-item:nth-child(8){
+        grid-row: span 2;
+    }
+}
+
+@media (min-width: 960px)
+{
+    .gallery{
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, auto-flow);
+    }
+
+    .gallery-item:first-child , 
+    .gallery-item:nth-child(7) ,
+    .gallery-item:nth-child(8){
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .gallery-item:nth-child(2) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}
+
+/*--- Footer ---*/
+
+@media (max-width: 700px)
+{
+    .footer {
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+    }
+}
+
