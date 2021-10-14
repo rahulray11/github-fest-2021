@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+*{
+    font-family: 'Architects Daughter', cursive;
+
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #383535;
+}
+.heading{
+    color: #8ce356;
+    margin-bottom: 3.2rem;
+    font-size: 4rem;
+}
+.dice-container{
+    display: flex;
+    
+}
+.dice1{
+    color: #8ce356;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+.dice2{
+    color: #8ce356;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+a{
+    cursor: pointer;
+}
+img{
+    height: 13rem;
+}
+h3{
+    margin-bottom: 4rem;
+    font-size: 1.4rem;
+}
