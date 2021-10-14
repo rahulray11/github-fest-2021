@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    margin-bottom: 70px;
+    background-color: #f4f4f4;
+    height: 100%;
+    overflow-x: hidden;
+  
+}
+#main_heading
+{
+    text-align:center;
+    background-color: #394046;
+    color:white;
+    font-weight: bold;
+    padding:10px 5px;
+    width:100%;
+    font-size: 2rem;
+   
+   margin-top:0
+    
+}
+#question_container
+{
+    width:75%;
+    background-color: white;
+    border:1px solid rgb(184, 182, 182);
+    margin: auto;
+    margin-top: 50px;
+    padding:10px 2px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+
+}
+#option_list
+{
+    list-style-type: none;
+}
