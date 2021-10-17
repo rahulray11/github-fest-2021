@@ -1,0 +1,29 @@
+// C program to check if a given
+// year is a leap year or not
+
+#include <stdbool.h>
+#include <stdio.h>
+
+bool checkYear(int n)
+{
+
+	return (n % 400 == 0)
+			? true
+			: (n % 4 == 0)
+					? (n % 100 != 0)
+					: false
+						? true
+						: false;
+}
+
+// Driver code
+int main()
+{
+	int year = 2000;
+
+	checkYear(year)
+		? printf("Leap Year")
+		: printf("Not a Leap Year");
+
+	return 0;
+}
