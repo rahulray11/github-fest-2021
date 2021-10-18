@@ -1,44 +1,48 @@
 #include<stdio.h>
-void swap( int *a, int *b)
-{
-    int temp= *a ;
-    *a=*b ;
-    *b=temp ;
-}
-int partition (int arr[],int lo, int hi)
-{
-   int i, j,pivot ;
-   pivot=arr[hi] ;
-   j= lo-1 ;
-   for ( i = lo; i < hi; i++)
-   {
-       if (arr[i]<pivot)
-       {
-           j++;
-           swap( arr+i, arr+j);
-       }
+void quicksort(int number[25],int first,int last){
+   int i, j, pivot, temp;
+
+   if(first<last){
+      pivot=first;
+      i=first;
+      j=last;
+
+      while(i<j){
+         while(number[i]<=number[pivot]&&i<last)
+            i++;
+         while(number[j]>number[pivot])
+            j--;
+         if(i<j){
+            temp=number[i];
+            number[i]=number[j];
+            number[j]=temp;
+         }
+      }
+
+      temp=number[pivot];
+      number[pivot]=number[j];
+      number[j]=temp;
+      quicksort(number,first,j-1);
+      quicksort(number,j+1,last);
+
    }
-   swap(arr+j+1, arr+hi );
-   return j+1;   
 }
-void quicksort(int arr[], int lo, int hi )
-{
-    if (lo<hi)
-    {
-        int p= partition(arr, lo,hi);
-        quicksort(arr, lo, p-1);
-        quicksort(arr, p+1, hi) ;
-    }    
-}
-int main()
-{
-    int arr[]={27, 10, 36, 18, 25, 45}, n=sizeof(arr)/sizeof(int) ;
-    quicksort(arr, 0, n-1 );
-    int i ;
-    printf(" Quick Sorted array : ");
-    for ( i = 0; i < n; i++)
-    {
-        printf("%d  ",arr[i]);
-    }
-    return 0 ;
+
+int main(){
+   int i, count, number[25];
+
+   printf("How many elements are u going to enter?: ");
+   scanf("%d",&count);
+
+   printf("Enter %d elements: ", count);
+   for(i=0;i<count;i++)
+      scanf("%d",&number[i]);
+
+   quicksort(number,0,count-1);
+
+   printf("Order of Sorted elements: ");
+   for(i=0;i<count;i++)
+      printf(" %d",number[i]);
+
+   return 0;
 }
