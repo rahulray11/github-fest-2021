@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Length Converter</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header-container">
+        <h2>Length Converter</h2>
+      </div>
+      <div class="component-form">
+        <p style="margin-left: 8px; margin-bottom: 4px">
+          Type a value in any of the fields to convert between Length
+          measurements:
+        </p>
+        <div class="component-half">
+          <label>Feet</label>
+          <input
+            id="inputFeet"
+            class="component-input"
+            type="number"
+            placeholder="Feet"
+            oninput="lengthConverter(this.id,this.value)"
+            onchange="lengthConverter(this.id,this.value)"
+          />
+        </div>
+        <div class="component-half">
+          <label>Meters</label>
+          <input
+            id="inputMeters"
+            class="component-input"
+            type="number"
+            placeholder="Meters"
+            oninput="lengthConverter(this.id,this.value)"
+            onchange="lengthConverter(this.id,this.value)"
+          />
+        </div>
+        <div class="component-half">
+          <label>Inches</label>
+          <input
+            id="inputInches"
+            class="component-input"
+            type="number"
+            placeholder="Inches"
+            oninput="lengthConverter(this.id,this.value)"
+            onchange="lengthConverter(this.id,this.value)"
+          />
+        </div>
+        <div class="component-half">
+          <label>cm</label>
+          <input
+            id="inputcm"
+            class="component-input"
+            type="number"
+            placeholder="cm"
+            oninput="lengthConverter(this.id,this.value)"
+            onchange="lengthConverter(this.id,this.value)"
+          />
+        </div>
+        <div class="component-half">
+          <label>Yards</label>
+          <input
+            id="inputYards"
+            class="component-input"
+            type="number"
+            placeholder="Yards"
+            oninput="lengthConverter(this.id,this.value)"
+            onchange="lengthConverter(this.id,this.value)"
+          />
+        </div>
+        <div class="component-half">
+          <label>Kilometers</label>
+          <input
+            id="inputKilometers"
+            class="component-input"
+            type="number"
+            placeholder="Kilometers"
+            oninput="lengthConverter(this.id,this.value)"
+            onchange="lengthConverter(this.id,this.value)"
+          />
+        </div>
+        <div class="component-half">
+          <label>Miles</label>
+          <input
+            id="inputMiles"
+            class="component-input"
+            type="number"
+            placeholder="Miles"
+            oninput="lengthConverter(this.id,this.value)"
+            onchange="lengthConverter(this.id,this.value)"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
