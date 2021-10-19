@@ -1,0 +1,96 @@
+.grid {
+    width: 612px;
+    height: 612px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    position: relative;
+}
+
+header {
+    background-image: url("header2.jpg");
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+header>h2 {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #feaa2b;
+    background-color: #f1ffab;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+header>h1 {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #f35588;
+    background-color: #3edbf0;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.score {
+    background: #c3f584;
+    font-size: 16px;
+    padding: 2px 10px;
+    font-family: sans-serif;
+    gg position: absolute;
+    left: -180px;
+    color: #4bb39a;
+}
+
+.time {
+    background: #c3f584;
+    font-size: 16px;
+    padding: 2px 10px;
+    font-family: sans-serif;
+    position: absolute;
+    right: -160px;
+    color: #4bb39a;
+}
+
+body {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.25);
+    background-image: url("bg2.gif");
+    background-size: cover;
+    background-position: inherit;
+}
+
+.square {
+    height: 200px;
+    width: 200px;
+    border: solid #f35588 2px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.win>img {
+    width: 800px;
+    height: 600px;
+}
+
+.mole {
+    background-image: url("icecream7.jpg");
+    background-size: cover;
+}
+
+.hidden {
+    display: none;
+}
+
+#me {
+    text-align: center;
+    color: coral;
+}
+
+.msg {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff600;
+    color: #26001b;
+}
