@@ -81,7 +81,6 @@ def edit():
 
     editor = Tk()
     editor.title("Update Data")
-    editor.iconbitmap("F:/PERSONAL DOCUMENTS/IT/CODING LEARN/PYTHON/COURSES/TKINTER TUTORIAL/img/color_palette_brush_paint_icon_193916.ico")
 
     conn = sqlite3.connect('contact_apps.db')
     c = conn.cursor()
