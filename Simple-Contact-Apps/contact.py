@@ -3,7 +3,6 @@ from tkinter import *
 
 root = Tk()
 root.title("Simple Contact Apps")
-root.iconbitmap("F:/PERSONAL DOCUMENTS/IT/CODING LEARN/PYTHON/COURSES/TKINTER TUTORIAL/img/color_palette_brush_paint_icon_193916.ico")
 
 # Database
 conn = sqlite3.connect('contact_apps.db')
