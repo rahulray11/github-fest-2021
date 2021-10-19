@@ -1,0 +1,51 @@
+#container {
+    margin-top: 10%;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 015px 0px;
+}
+
+button {
+    border-radius: 5px;
+}
+
+#minus {
+    padding: 10px 15px;
+    margin-right: 5px;
+    background-color: red;
+    color: white;
+    border: 0px solid red;
+}
+
+#reset {
+    padding: 10px 25px;
+    background-color: black;
+    color: white;
+    border: 0px solid black;
+}
+
+#plus {
+    padding: 10px 15px;
+    margin-left: 5px;
+    background-color: green;
+    color: white;
+    border: 0px solid green;
+}
+
+body {
+    background-color: skyblue;
+}
+
+#Numbering {
+    text-align: center;
+    font-size: 75px;
+    color: white;
+}
